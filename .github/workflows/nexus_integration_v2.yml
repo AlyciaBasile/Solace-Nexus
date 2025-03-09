@@ -1,0 +1,17 @@
+name: Solace Nexus Integration - Version 2
+
+on workflow_dispatch:
+  jobs:
+
+    - name: Sync Solace-Intelligence and Solace-Interface
+      run: python3 -m api_bridge.py
+
+schedule:
+  daily:
+    - name: Run Synhronization Job      run: python3 -m api_bridge.py
+
+events:
+  workflow_dispatch:
+  - type: workflow_dispatch
+  workflow_dispatch:
+    type: workflow_dispatch
