@@ -1,0 +1,3 @@
+This file contains the instructions to update the workflow and include workflow_dispatch for manual triggering.
+
+Set up a GitHub Actions workflow to read this file and update .github/workflows/nexus_integration_v2.ymt to include the manual trigger.
