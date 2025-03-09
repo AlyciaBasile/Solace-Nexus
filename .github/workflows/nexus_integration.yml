@@ -1,0 +1,16 @@
+name: Solace Nexus Integration
+
+on push:
+
+  jobs:
+
+    - name: Sync Solace-Intelligence and Solace-Interface
+      run: python3 -m api_bridge.py
+
+schedule:
+  daily:
+    - name: Run Synhronization Job      run: python3 -m api_bridge.py
+
+explicit-manual-trigger:
+  name: Trigger Manual Integration
+  runs-on-token: true
