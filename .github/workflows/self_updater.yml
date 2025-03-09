@@ -1,0 +1,14 @@
+name: Solace Nexus Self-Updater System
+
+# This workflow automatically retrieves and updates the sha hashes for all workflow files.
+
+events:
+  workflow_dispatch:
+
+  jobs:
+
+    - name: Get SHA hashes for workflows
+      run: sha.py fetch_sha_script.py
+
+    - name: Update workflow files using retrieved SHA values
+      run: update_script.py
