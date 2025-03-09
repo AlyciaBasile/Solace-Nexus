@@ -1,0 +1,13 @@
+name: Update Workflow - Version 2
+
+on workflow_dispatch:
+  jobs:
+
+    - name: Read workflow instructions from text file
+      run: python3 -m read_update.js
+
+events:
+  workflow_dispatch:
+  - type: workflow_dispatch
+  workflow_dispatch:
+    type: workflow_dispatch
